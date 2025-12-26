@@ -34,35 +34,54 @@ const HeroSection = () => {
 
     return (
         <div className='grid lg:grid-cols-3 p-4 gap-4'>
-            <div className='p-4 rounded-lg lg:col-span-2 md:col-span-2 bg-secondary'>
-                <Image src="/images/youssef.png" className='rounded-xl' alt="Hero" width={500} height={600} />
+            {/* Left Column - Hero Image */}
+            <div className='p-4 rounded-lg lg:col-span-2 md:col-span-2 bg-brand-secondary'>
+                <Image
+                    src="/images/youssef.png"
+                    className='rounded-xl'
+                    alt="Hero"
+                    width={500}
+                    height={600}
+                />
             </div>
 
-            <div className='bg-secondary p-4 rounded-lg shadow-sm shadow-secondary flex flex-col gap-4 w-full'>
-                <div ref={containerRef} className='bg-primary p-4 rounded-lg flex items-center justify-between shadow-sm'>
-                    <h2 className='text-2xl font-bold split'>
-                        <span className='text-brand'> Front-End Developer </span>
+            {/* Right Column - Info Cards */}
+            <div className='bg-brand-secondary p-4 rounded-lg shadow-sm flex flex-col justify-between gap-4'>
+
+                {/* Experience Card */}
+                <div ref={containerRef} className='bg-brand-bg p-4 rounded-lg flex items-center justify-between shadow-sm border border-brand-border'>
+                    <h2 className='text-xl font-bold split'>
+                        <span className='text-brand-primary'> Front-End Developer </span>
                         with 3+ years of hands-on experience building web applications using React.
                     </h2>
                 </div>
 
-                <div className='bg-primary p-4 rounded-lg flex items-center justify-between shadow-sm'>
-                    <h2 className='text-2xl font-bold split'>
-                        I’ve led teams, delivered complex UI solutions, and collaborated with global startups. <span className='text-orange-300'>Always learning</span>, always coding.
+                {/* Philosophy Card */}
+                <div className='bg-brand-bg p-4 rounded-lg flex items-center justify-between shadow-sm border border-brand-border'>
+                    <h2 className='text-xl font-bold split'>
+                        I’ve led teams, delivered complex UI solutions, and collaborated with global startups.
+                        <span className='text-brand-warning'> Always learning</span>, always coding.
                     </h2>
                 </div>
 
-                <div className='bg-primary p-4 rounded-lg flex items-center justify-between shadow-sm'>
-                    <h2 className='text-2xl font-bold split'>
+                {/* Goal Card */}
+                <div className='bg-brand-bg p-4 rounded-lg flex items-center justify-between shadow-sm border border-brand-border'>
+                    <h2 className='text-xl font-bold split'>
                         I’m looking to join innovative teams where I can solve real-world problems and keep growing.
                     </h2>
                 </div>
 
+                {/* Social Links Row */}
                 <div className="flex items-center gap-3 justify-between">
                     {myInfo.map((info, id) => (
-                        <a key={id} target='_blank' href={info.link}
-                            className='bg-primary hover:bg-brand hover:scale-110 transition ease-in-out hover:bg-white hover:text-primary p-4 rounded-lg flex items-center justify-center shadow-sm'>
-                            <h2 className='text-2xl font-bold'>{info.icons}</h2>
+                        <a
+                            key={id}
+                            target='_blank'
+                            href={info.link}
+                            rel="noopener noreferrer"
+                            className='bg-brand-bg hover:bg-brand-secondary hover:text-white hover:scale-110 transition-all duration-300 p-4 rounded-lg flex items-center justify-center shadow-sm border border-brand-border w-full'
+                        >
+                            <span className='text-2xl font-bold'>{info.icons}</span>
                         </a>
                     ))}
                 </div>
