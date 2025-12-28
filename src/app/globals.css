@@ -109,3 +109,16 @@ button {
 .bg-error {
   background-color: rgb(var(--error));
 }
+
+
+.hero-left {
+  background-image: url('/images/hero-bg-v1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+}

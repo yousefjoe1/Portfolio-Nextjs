@@ -33,20 +33,20 @@ const HeroSection = () => {
     )
 
     return (
-        <div className='grid lg:grid-cols-3 p-4 gap-4'>
+        <section className='grid lg:grid-cols-3 gap-4'>
             {/* Left Column - Hero Image */}
-            <div className='p-4 rounded-lg lg:col-span-2 md:col-span-2 bg-brand-secondary'>
-                <Image
-                    src="/images/youssef.png"
-                    className='rounded-xl'
+            <div className='p-4 rounded-lg lg:col-span-2 md:col-span-2 hero-left'>
+                {/* <Image
+                    src="/images/hero-bg-v1.png"
+                    className='rounded-xl w-[200px] object-contain'
                     alt="Hero"
                     width={500}
                     height={600}
-                />
+                /> */}
             </div>
 
             {/* Right Column - Info Cards */}
-            <div className='bg-brand-secondary p-4 rounded-lg shadow-sm flex flex-col justify-between gap-4'>
+            <div className='bg-brand-secondary p-4 rounded-lg shadow-sm flex flex-col justify-between gap-4 '>
 
                 {/* Experience Card */}
                 <div ref={containerRef} className='bg-brand-bg p-4 rounded-lg flex items-center justify-between shadow-sm border border-brand-border'>
@@ -86,7 +86,7 @@ const HeroSection = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
