@@ -46,7 +46,7 @@ const HeroSection = () => {
             </div>
 
             {/* Right Column - Info Cards */}
-            <div className='bg-brand-secondary p-4 rounded-lg shadow-sm flex flex-col justify-between gap-4 '>
+            <div className='bg-brand-secondary/50 shadow-lg p-4 rounded-lg flex flex-col justify-between gap-4 '>
 
                 {/* Experience Card */}
                 <div ref={containerRef} className='bg-brand-bg p-4 rounded-lg flex items-center justify-between shadow-sm border border-brand-border'>

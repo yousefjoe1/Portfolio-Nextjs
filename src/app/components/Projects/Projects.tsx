@@ -3,7 +3,7 @@
 const myProjects = [
     {
         name: 'LevelUp ESG®', image: '/images/levelup.png', details: `LevelUp ESG® is a London-based AI platform transforming corporate carbon emissions, ESG risk management and assurance. We empower organisations with AI-driven solutions that turn sustainability and data challenges into strategic value, fostering environmental stewardship and business success.`,
-        tech: ["React.js", "Next.js", "Tailwind CSS", "Shade-cn"], link: 'https://levelupesg.co/'
+        tech: ["React.js", "Next.js", "Tailwind CSS", "Shadcn-ui"], link: 'https://levelupesg.co/'
     },
     {
         name: 'Eskan El Mansoura', image: '/images/eskan.png', details: 'A real estate website that offers various properties. You can visit a project to choose what suits you from shops or apartments, also there are filters by price or unit number or block location or meter price and much more of complex data handling, and various features. The project has a dashboard for admin to control the 90% of the data.',
@@ -18,7 +18,7 @@ const myProjects = [
         tech: ["React.js", "Redux.js", "Tailwind CSS"], link: 'https://www.sirtz.com/'
     },
     {
-        name: 'Gym', image: '/images/first-work-freelance.png', details: `gym's platform is ideal for sports facilities, fitness centres, gyms, personal trainers, and anyone who wants to streamline their business management processes. Dgym's reports provide valuable insights into business performance, enabling you to make data-driven decisions to maximize profits It simplifies registration, memberships, member feedback, online payments. Accessible from any device.`,
+        name: 'DGym', image: '/images/first-work-freelance.png', details: `gym's platform is ideal for sports facilities, fitness centres, gyms, personal trainers, and anyone who wants to streamline their business management processes. Dgym's reports provide valuable insights into business performance, enabling you to make data-driven decisions to maximize profits It simplifies registration, memberships, member feedback, online payments. Accessible from any device.`,
         tech: ["React.js", "Redux.js", "Tailwind CSS"], link: 'https://www.sirtz.com/'
     }
 ]

@@ -41,12 +41,30 @@
 }
 
 /* Base styles using the new variables */
-@layer base {
+/* @layer base {
   body {
-    background-color: var(--color-brand-bg);
+    overflow-x: hidden;
     color: var(--color-brand-text);
     @apply transition-colors duration-300;
   }
+} */
+
+@layer base {
+  body {
+    @apply transition-colors duration-300;
+    color: var(--color-brand-text);
+
+  }
+}
+
+.body-bg-image {
+  background-image: url('/images/bg-body-v2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+
 }
 
 button {
