@@ -35,14 +35,14 @@ const HeroSection = () => {
     return (
         <section className='grid lg:grid-cols-3 gap-4'>
             {/* Left Column - Hero Image */}
-            <div className='p-4 rounded-lg lg:col-span-2 md:col-span-2 hero-left'>
-                {/* <Image
-                    src="/images/hero-bg-v1.png"
-                    className='rounded-xl w-[200px] object-contain'
+            <div className='p-4 rounded-lg lg:col-span-2 md:col-span-2 bg-brand-secondary/50'>
+                <Image
+                    src="/images/youssef.png"
+                    className='rounded-full w-fit object-contain'
                     alt="Hero"
                     width={500}
                     height={600}
-                /> */}
+                />
             </div>
 
             {/* Right Column - Info Cards */}

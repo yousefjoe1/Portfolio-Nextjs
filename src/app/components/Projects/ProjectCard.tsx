@@ -1,13 +1,14 @@
-import { ArrowRightIcon, FileQuestionMark, Github, Link2, LinkIcon, Sunrise } from 'lucide-react';
+import { FileQuestionMark, Github, Sunrise } from 'lucide-react';
 import Image from 'next/image';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 
 interface Project {
     name: string;
     image: string;
     details: string;
     tech: string[];
-    link: string;
+    link?: string;
+    links?: string[];
     repo?: string;
 }
 
@@ -17,7 +18,10 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
     return (
         <>
-            <div className='card-div bg-brand-tertiary hover:bg-brand-tertiary/50 group relative rounded-lg shadow-md overflow-hidden min-h-[480px] cursor-pointer transition-all duration-300 hover:shadow-xl'>
+            <div className='card-div bg-brand-tertiary group relative rounded-lg shadow-md overflow-hidden min-h-[480px] cursor-pointer transition-all duration-300 hover:shadow-xl'>
+
+                <div className='bg-black/10 absolute opacity-0 group-hover:opacity-100 inset-0 z-10 group-hover:z-0 w-3 h-3 rounded-full group-hover:w-full group-hover:rounded-none group-hover:h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300' />
+
                 <div className='relative h-64 overflow-hidden'>
                     <Image
                         width={300}
@@ -30,7 +34,16 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
                 <div className='p-4 flex flex-col gap-3 relative'>
 
-                    <h3 className='text-lg font-semibold mb-2'>{project.name}</h3>
+                    <div className="flex justify-between">
+                        <h3 className='text-xl font-semibold mb-2'>{project.name}</h3>
+                        <button
+                            onClick={() => detailsModal.current?.showModal()}
+                            className='w-fit bg-brand-primary/20 text-white px-4 py-2 rounded-full hover:bg-brand-secondary transition-all duration-300 hover:scale-105'
+                        >
+
+                            <FileQuestionMark size={20} />
+                        </button>
+                    </div>
 
 
                     <div className='flex items-center flex-wrap gap-2'>
@@ -44,15 +57,32 @@ const ProjectCard = ({ project }: { project: Project }) => {
                         ))}
                     </div>
 
-                    <div className='flex items-center mt-2'>
+                    <div className='flex items-center flex-wrap gap-2 mt-2'>
                         <a
                             href={project.link}
                             target='_blank'
                             rel='noopener noreferrer'
                             className='bg-brand-primary/20 text-white px-4 py-2 rounded-full hover:bg-brand-secondary transition-all duration-300 hover:scale-105 flex items-center group/link'
                         >
-                            <Sunrise size={17} />
+                            <Sunrise size={20} />
                         </a>
+                        {project.links &&
+                            <>
+                                {
+                                    project.links.map((l, index) => (
+                                        <a
+                                            key={index}
+                                            href={l}
+                                            target='_blank'
+                                            rel='noopener noreferrer'
+                                            className='bg-brand-primary/20 text-white px-4 py-2 rounded-full hover:bg-brand-secondary transition-all duration-300 hover:scale-105 flex items-center group/link'
+                                        >
+                                            <Sunrise size={20} />
+                                        </a>
+                                    ))
+                                }
+                            </>
+                        }
                         {project.repo && (
                             <a
                                 href={project.repo}
@@ -60,21 +90,15 @@ const ProjectCard = ({ project }: { project: Project }) => {
                                 rel='noopener noreferrer'
                                 className='ml-3 bg-brand-primary/20 text-white px-4 py-2 rounded-full hover:bg-brand-secondary transition-all duration-300 hover:scale-105'
                             >
-                                <Github size={17} />
+                                <Github size={20} />
                             </a>
                         )}
-                        <button
-                            onClick={() => detailsModal.current?.showModal()}
-                            className='ml-3 bg-brand-primary/20 text-white px-4 py-2 rounded-full hover:bg-brand-secondary transition-all duration-300 hover:scale-105'
-                        >
-
-                            <FileQuestionMark size={17} />
-                        </button>
                     </div>
+
                 </div>
             </div>
 
-            <dialog ref={detailsModal} className='fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand-border-secondary text-gray-300 p-4 rounded-lg transition-all duration-800 ease-in-out z-10'>
+            <dialog ref={detailsModal} className='fixed lg:text-2xl md:text-xl sm:text-base top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand-border-secondary text-gray-300 p-4 rounded-lg transition-all duration-800 ease-in-out z-10'>
                 <div className='bg-brand-border-secondary text-gray-300 p-4 rounded-lg transform transition-all duration-800 ease-in-out z-10'>
                     {project.details}
                 </div>

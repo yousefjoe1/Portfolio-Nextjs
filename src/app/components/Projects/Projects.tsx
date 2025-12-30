@@ -1,13 +1,15 @@
 'use client';
 
+const links = ["https://digitalgym.in/v1/app/pages/dashboards/default.html", "https://digitalgym.in/v1/app/pages/authentication/signin/cover.html", "https://digitalgym.in/v1/app/pages/authentication/signup/cover.html", "https://digitalgym.in/v1/app/pages/ecommerce/referral.html", "https://digitalgym.in/v1/app/pages/applications/wizard.html", "https://digitalgym.in/v1/app/pages/applications/analytics.html", "https://digitalgym.in/v1/app/pages/ecommerce/overview.html", "https://digitalgym.in/v1/app/pages/ecommerce/attendee.html", "https://digitalgym.in/v1/app/pages/ecommerce/employeelist.html", "https://digitalgym.in/v1/app/pages/ecommerce/memberlist.html"]
+
 const myProjects = [
     {
-        name: 'LevelUp ESG®', image: '/images/levelup.png', details: `LevelUp ESG® is a London-based AI platform transforming corporate carbon emissions, ESG risk management and assurance. We empower organisations with AI-driven solutions that turn sustainability and data challenges into strategic value, fostering environmental stewardship and business success.`,
-        tech: ["React.js", "Next.js", "Tailwind CSS", "Shadcn-ui"], link: 'https://levelupesg.co/'
+        name: 'SustaingRC', image: '/images/sustainegrc.png', details: `LevelUp ESG® is a London-based AI platform transforming corporate carbon emissions, ESG risk management and assurance. We empower organisations with AI-driven solutions that turn sustainability and data challenges into strategic value, fostering environmental stewardship and business success.`,
+        tech: ["React.js", "Next.js", "Tailwind CSS", "Shadcn-ui"], link: 'https://www.sustaingrc.com/'
     },
     {
         name: 'Eskan El Mansoura', image: '/images/eskan.png', details: 'A real estate website that offers various properties. You can visit a project to choose what suits you from shops or apartments, also there are filters by price or unit number or block location or meter price and much more of complex data handling, and various features. The project has a dashboard for admin to control the 90% of the data.',
-        tech: ["SASS", "React.js", "Redux.js", "Tailwind CSS", "Chakra-UI", "Swiper"], link: 'https://eskanmansoura.com/'
+        tech: ["SASS", "React.js", "Redux.js", "Tailwind CSS", "Chakra-UI", "Swiper"], link: 'https://mansoura-eco-build.com/'
     },
     {
         name: 'Abo Taleb', image: '/images/abo-taleb.png', details: 'Abo Taleb is a sophisticated online platform that offers comprehensive English courses tailored specifically for Military Bases Students. Admin dashboard and analyze the users enrolled and transactions on courses. Handle user registration and login. Integrate payment with the backend. Built user friendly responsive pages with easy to navigate between pages. Handle user comments and admin posts.',
@@ -15,11 +17,11 @@ const myProjects = [
     },
     {
         name: 'Mansoura Outlet', image: '/images/outlet.png', details: `An e-commerce platform that offers a comprehensive directory of clothing stores in the city of Mansoura. The website is structured based on the city's streets, with each street featuring a curated selection of clothing boutiques`,
-        tech: ["React.js", "Redux.js", "Tailwind CSS"], link: 'https://www.sirtz.com/'
+        tech: ["React.js", "Redux.js", "Tailwind CSS"], link: 'https://abc-mansoura.com/'
     },
     {
         name: 'DGym', image: '/images/first-work-freelance.png', details: `gym's platform is ideal for sports facilities, fitness centres, gyms, personal trainers, and anyone who wants to streamline their business management processes. Dgym's reports provide valuable insights into business performance, enabling you to make data-driven decisions to maximize profits It simplifies registration, memberships, member feedback, online payments. Accessible from any device.`,
-        tech: ["React.js", "Redux.js", "Tailwind CSS"], link: 'https://www.sirtz.com/'
+        tech: ["React.js", "Redux.js", "Tailwind CSS"], links: links
     }
 ]
 import { useRef } from 'react';
@@ -60,10 +62,6 @@ const Projects = () => {
                     </span>
                 </h2>
 
-                {/* <p className="text-gray-400 bg-brand-secondary/80 p-1 rounded-2xl text-lg md:text-xl leading-relaxed max-w-2xl">
-                    Here are some of my recent projects. Each project showcases
-                    different skills and technologies I&apos;ve worked with.
-                </p> */}
             </div>
 
             <div className="bg-brand-secondary rounded-2xl p-2 mx-auto w-1/2 mt-8">
