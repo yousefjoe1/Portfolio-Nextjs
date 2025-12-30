@@ -60,15 +60,17 @@ const Projects = () => {
                     </span>
                 </h2>
 
-                <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-2xl">
+                {/* <p className="text-gray-400 bg-brand-secondary/80 p-1 rounded-2xl text-lg md:text-xl leading-relaxed max-w-2xl">
                     Here are some of my recent projects. Each project showcases
                     different skills and technologies I&apos;ve worked with.
-                </p>
+                </p> */}
             </div>
 
-            <h3 className='bg-linear-to-r from-indigo-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent text-3xl text-center mt-8 font-semibold'>
-                Real World Projects
-            </h3>
+            <div className="bg-brand-secondary rounded-2xl p-2 mx-auto w-1/2 mt-8">
+                <h3 className='bg-linear-to-r from-indigo-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent text-3xl text-center font-semibold'>
+                    Real World Projects
+                </h3>
+            </div>
 
             {/* Added 'project-card' class to the map for GSAP targeting */}
             <div ref={container} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
@@ -77,6 +79,13 @@ const Projects = () => {
                         <ProjectCard project={project} />
                     </div>
                 ))}
+            </div>
+
+            <div className="bg-brand-secondary rounded-2xl p-2 mx-auto w-1/2 mt-12">
+
+                <h3 className='bg-linear-to-r from-indigo-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent text-3xl text-center font-semibold'>
+                    DEPI Scholarship Project
+                </h3>
             </div>
         </section>
     );
