@@ -52,7 +52,8 @@ const HeroSection = () => {
                 <div ref={containerRef} className='bg-brand-bg p-4 rounded-lg flex items-center justify-between shadow-sm border border-brand-border'>
                     <h2 className='text-xl font-bold split'>
                         <span className='text-brand-primary'> Front-End Developer </span>
-                        with 3+ years of hands-on experience building web applications using React.
+                        with 3+ years of hands-on experience building web applications using React,
+                        with hands-on experience working with Next.js + TypeScript in real-world project
                     </h2>
                 </div>
 
