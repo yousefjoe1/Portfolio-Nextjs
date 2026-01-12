@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { gsap } from 'gsap';
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
+import LeftSection from './LeftSection';
 
 const HeroSection = () => {
     const containerRef = useRef<HTMLDivElement | null>(null)
@@ -35,15 +36,7 @@ const HeroSection = () => {
     return (
         <section className='grid lg:grid-cols-3 gap-4'>
             {/* Left Column - Hero Image */}
-            <div className='p-4 rounded-lg lg:col-span-2 md:col-span-2 bg-brand-secondary/50'>
-                <Image
-                    src="/images/youssef.png"
-                    className='rounded-full w-fit object-contain'
-                    alt="Hero"
-                    width={500}
-                    height={600}
-                />
-            </div>
+            <LeftSection />
 
             {/* Right Column - Info Cards */}
             <div className='bg-brand-secondary/50 shadow-lg p-4 rounded-lg flex flex-col justify-between gap-4 '>

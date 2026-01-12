@@ -5,29 +5,29 @@ const links = ["https://digitalgym.in/v1/app/pages/dashboards/default.html", "ht
 const myProjects = [
     {
         name: 'SustainGRC', image: '/images/sustainegrc.png', details: `SustainGRC is a London-based AI platform transforming corporate carbon emissions, ESG risk management and assurance. We empower organisations with AI-driven solutions that turn sustainability and data challenges into strategic value, fostering environmental stewardship and business success.`,
-        tech: ["React.js.js", "Next.js", "Tailwind CSS", "Shadcn-ui"], link: 'https://www.sustaingrc.com/'
+        tech: ["React.js", "Next.js", "Tailwind CSS", "Shadcn-ui"], link: 'https://www.sustaingrc.com/'
     },
     {
         name: 'Eskan El Mansoura', image: '/images/eskan.png', details: 'A real estate website that offers various properties. You can visit a project to choose what suits you from shops or apartments, also there are filters by price or unit number or block location or meter price and much more of complex data handling, and various features. The project has a dashboard for admin to control the 90% of the data.',
-        tech: ["SASS", "React.js.js", "Redux.js", "Tailwind CSS", "Chakra-UI", "Swiper"], link: 'https://mansoura-eco-build.com/'
+        tech: ["SASS", "React.js", "Redux.js", "Tailwind CSS", "Chakra-UI", "Swiper"], link: 'https://mansoura-eco-build.com/'
     },
     {
         name: 'Abo Taleb', image: '/images/abo-taleb.png', details: 'Abo Taleb is a sophisticated online platform that offers comprehensive English courses tailored specifically for Military Bases Students. Admin dashboard and analyze the users enrolled and transactions on courses. Handle user registration and login. Integrate payment with the backend. Built user friendly responsive pages with easy to navigate between pages. Handle user comments and admin posts.',
-        tech: ["React.js.js", "Redux.js", "Tailwind CSS"], link: 'https://www.sirtz.com/'
+        tech: ["React.js", "Redux.js", "Tailwind CSS"], link: 'https://www.sirtz.com/'
     },
     {
         name: 'Mansoura Outlet', image: '/images/outlet.png', details: `An e-commerce platform that offers a comprehensive directory of clothing stores in the city of Mansoura. The website is structured based on the city's streets, with each street featuring a curated selection of clothing boutiques`,
-        tech: ["React.js.js", "Redux.js", "Tailwind CSS"], link: 'https://abc-mansoura.com/'
+        tech: ["React.js", "Redux.js", "Tailwind CSS"], link: 'https://abc-mansoura.com/'
     },
     {
         name: 'DGym', image: '/images/first-work-freelance.png', details: `gym's platform is ideal for sports facilities, fitness centres, gyms, personal trainers, and anyone who wants to streamline their business management processes. Dgym's reports provide valuable insights into business performance, enabling you to make data-driven decisions to maximize profits It simplifies registration, memberships, member feedback, online payments. Accessible from any device.`,
-        tech: ["React.js.js", "Redux.js", "Tailwind CSS"], links: links
+        tech: ["React.js", "Redux.js", "Tailwind CSS"], links: links
     }
 ]
 
 const ScholarshipProjects = [{
     name: 'Shop', image: '/images/depi-project.png', details: 'E commerce for clothes.',
-    tech: ["React.js.js", "Tailwind CSS", 'Node.js', 'Express.js', 'MongoDB'], link: 'https://vite-React.js-chi-jet.vercel.app/'
+    tech: ["React.js", "Tailwind CSS", 'Node.js', 'Express.js', 'MongoDB'], link: 'https://vite-React.js-chi-jet.vercel.app/'
 }
 ]
 
@@ -59,7 +59,7 @@ const personalProjects = [
         name: 'Memory Game',
         image: '/images/mem-game.png',
         details: 'Card matching game to test cognitive skills.',
-        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js.JS", "React.js-TYPESCRIPT", "TAILWIND_CSS"],
+        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js", "React.js-TYPESCRIPT", "TAILWIND_CSS"],
         link: 'https://yousefjoe1.github.io/Memory-Game/'
     },
     {
@@ -73,7 +73,7 @@ const personalProjects = [
         name: 'Amazon Clone',
         image: '/images/amazontemp.png',
         details: 'E-commerce interface clone featuring product listings.',
-        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js.JS"],
+        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js"],
         link: 'https://yousefjoe1.github.io/amazone1/'
     },
 
@@ -81,35 +81,35 @@ const personalProjects = [
         name: 'Product Landing page',
         image: '/images/product-landingpage.png',
         details: 'High-conversion landing page for digital or physical products.',
-        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js.JS", "React.js-TYPESCRIPT", "TAILWIND_CSS"],
+        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js", "React.js-TYPESCRIPT", "TAILWIND_CSS"],
         link: 'https://yousefjoe1.github.io/Simple-Product-Landing-Page/'
     },
     {
         name: 'Calculator',
         image: '/images/calc.png',
         details: 'A clean, functional web calculator.',
-        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js.JS", "TYPESCRIPT", "TAILWIND CSS"],
+        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js", "TYPESCRIPT", "TAILWIND CSS"],
         link: 'https://yousefjoe1.github.io/Simple-Calculator/'
     },
     {
         name: 'LinkedIn Clone',
         image: '/images/linkedin.png',
         details: 'Social media UI clone focusing on professional networking.',
-        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js.JS", "React.js_BOOTSTRAP", "BOOTSTRAP"],
+        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js", "React.js_BOOTSTRAP", "BOOTSTRAP"],
         link: 'https://yousefjoe1.github.io/linkedIn-clone-2022/'
     },
     {
         name: 'Discord Clone',
         image: '/images/discord.png',
         details: 'Real-time communication platform interface.',
-        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js.JS", "React.js_BOOTSTRAP", "BOOTSTRAP"],
+        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js", "React.js_BOOTSTRAP", "BOOTSTRAP"],
         link: 'https://yousefjoe1.github.io/discord-clone/#/'
     },
     {
         name: 'Food Shopping Cart',
         image: '/images/shoppingcart.png',
         details: 'Shopping cart functionality for food ordering.',
-        tech: ["HTML", "CSS", "JAVASCRIPT", "BOOTSTRAP", "React.js.JS"],
+        tech: ["HTML", "CSS", "JAVASCRIPT", "BOOTSTRAP", "React.js"],
         link: 'https://yousefjoe1.github.io/my-shopping-cart/#/shopping-cart'
     },
 
@@ -117,14 +117,14 @@ const personalProjects = [
         name: 'Words Game',
         image: '/images/wordgame.png',
         details: 'Word-based puzzle game.',
-        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js.JS", "TYPESCRIPT", "TAILWIND CSS"],
+        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js", "TYPESCRIPT", "TAILWIND CSS"],
         link: 'https://yousefjoe1.github.io/Words-Game/'
     },
     {
         name: 'Vegetables Shopping Cart',
         image: '/images/veg-cart.png',
         details: 'E-commerce cart specifically for grocery shopping.',
-        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js.JS", "REDUX/TOOLKIT"],
+        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js", "REDUX/TOOLKIT"],
         link: 'https://yousefjoe1.github.io/vegetables-shopping-cart/'
     },
     {
@@ -138,14 +138,14 @@ const personalProjects = [
         name: 'Landing page',
         image: '/images/temp1.png',
         details: 'Bootstrap-powered responsive landing page.',
-        tech: ["HTML", "CSS", "JAVASCRIPT", "BOOTSTRAP", "React.js.JS"],
+        tech: ["HTML", "CSS", "JAVASCRIPT", "BOOTSTRAP", "React.js"],
         link: 'https://yousefjoe1.github.io/temp-2n/#/'
     },
     {
         name: 'Advice Generator',
         image: '/images/advice-generator.png',
         details: 'App that fetches and displays random pieces of advice.',
-        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js.JS"],
+        tech: ["HTML", "CSS", "JAVASCRIPT", "React.js"],
         link: 'https://yousefjoe1.github.io/advice-generator-app/'
     }
 ];
