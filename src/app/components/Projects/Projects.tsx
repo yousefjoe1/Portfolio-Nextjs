@@ -167,20 +167,20 @@ const Projects = () => {
         gsap.from(".project-card", {
             y: 100,            // Start 100px below original position
             opacity: 0,        // Start invisible
-            duration: 1.2,     // Animation length
-            stagger: 0.2,      // Delay between each card (0.2s)
+            duration: 1.8,     // Animation length
+            stagger: 1,      // Delay between each card (0.2s)
             delay: 1,
             ease: "power2.out",
             scrollTrigger: {
                 trigger: container.current,
                 start: "top 100%", // Starts when the top of the container hits 80% of viewport height
-                toggleActions: "play none none none", // Plays once
+                toggleActions: "play play none none", // Plays once
             }
         });
     }, { scope: container });
 
     return (
-        <section className="py-12 px-4 max-w-7xl mx-auto overflow-hidden">
+        <section data-aos="fade-up delay-200" className="py-12 px-4 max-w-7xl mx-auto overflow-hidden">
             <div className="flex flex-col justify-center items-center text-center">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                     My <span className="bg-linear-to-r from-indigo-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
@@ -197,9 +197,11 @@ const Projects = () => {
             </div>
 
             {/* Added 'project-card' class to the map for GSAP targeting */}
-            <div ref={container} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                 {myProjects.map((project, index) => (
-                    <div key={index} className="project-card">
+                    <div key={index} data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration={`${index * 1000}`}>
                         <ProjectCard project={project} />
                     </div>
                 ))}
@@ -212,9 +214,11 @@ const Projects = () => {
                 </h3>
             </div>
 
-            <div ref={container} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                 {ScholarshipProjects.map((project, index) => (
-                    <div key={index} className="project-card">
+                    <div key={index} data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration={`${index * 1000}`}>
                         <ProjectCard project={project} />
                     </div>
                 ))}
