@@ -112,7 +112,7 @@ const LeftSection = () => {
             transform: scaleY(0) skewX(0deg);
             transform-origin: top;
         }
-        /* The "Strike" - fast and bright */
+
         5% {
             opacity: 1;
             transform: scaleY(1.2) skewX(-5deg);
@@ -125,7 +125,7 @@ const LeftSection = () => {
             opacity: 1;
             transform: scaleY(1) skewX(0deg);
         }
-        /* Fade out phase */
+
         25% {
             opacity: 0;
             transform: scaleY(1);
@@ -136,8 +136,7 @@ const LeftSection = () => {
     }
 
     .animate-lightning {
-        /* Faster timing for a more "shocking" feel */
-        animation: lightning 1.5s ease-out infinite;
+        animation: lightning 2.9s ease-out infinite;
     }
 `}</style>
 
