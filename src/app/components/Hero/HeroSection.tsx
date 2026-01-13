@@ -34,7 +34,7 @@ const HeroSection = () => {
     )
 
     return (
-        <section className='grid lg:grid-cols-3 gap-4'>
+        <section className='grid lg:grid-cols-3 gap-4 min-h-[80vh]'>
             {/* Left Column - Hero Image */}
             <LeftSection />
 

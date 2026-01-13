@@ -237,7 +237,9 @@ const Projects = () => {
             {/* Added 'project-card' class to the map for GSAP targeting */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                 {personalProjects.map((project, index) => (
-                    <div key={index} className="project-card">
+                    <div key={index} data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration={`${index * 1000}`}>
                         <ProjectCard project={project} />
                     </div>
                 ))}

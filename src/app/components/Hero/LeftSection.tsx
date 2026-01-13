@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image'
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 const LeftSection = () => {
     const techStack = [
@@ -13,7 +13,6 @@ const LeftSection = () => {
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isAnimating, setIsAnimating] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -87,8 +86,7 @@ const LeftSection = () => {
                 {/* Second Circle (Animated) */}
                 <div className="relative z-10 top-9">
                     <div
-                        className={`w-32 h-32 rounded-full border-4 bg-white shadow-lg flex items-center justify-center transition-all duration-300 ${isAnimating ? 'border-blue-500 shadow-blue-500/50 shadow-xl scale-105' : 'border-gray-300'
-                            }`}
+                        className={`w-32 h-32 rounded-full border-4 bg-white shadow-lg flex items-center justify-center transition-all duration-300`}
                     >
                         <div
                             key={currentIndex}
