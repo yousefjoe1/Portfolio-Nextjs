@@ -34,10 +34,17 @@ const ScholarshipProjects = [{
 
 const personalProjects = [
     {
+        name: 'Productivity',
+        image: '/images/productivity-app.png',
+        details: 'Weekly Tasks feature that allow to marke the task to the current day or the desired one, will reset every week and you can see all your tasks in your dashboard',
+        tech: ["Next.js", "TAILWIND CSS", "SupaBase"],
+        link: 'https://my-tasks-inky.vercel.app/'
+    },
+    {
         name: 'Fruits',
         image: '/images/fruit.png',
         details: 'Interactive quiz application with real-time features.',
-        tech: ["Next.js", "React.js", "TAILWIND CSS", "NODE JS", "MONGOOS", "MONGO_DB"],
+        tech: ["Next.js", "TAILWIND CSS", "NODE JS", "MONGOOS", "MONGO_DB"],
         link: 'https://food-menu-bice.vercel.app/'
     },
 
