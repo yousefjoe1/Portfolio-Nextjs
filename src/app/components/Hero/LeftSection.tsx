@@ -1,147 +1,137 @@
 'use client';
 
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
 
-const LeftSection = () => {
+interface Props {
+    isFixed?: boolean;
+}
+
+const LeftSection = ({ isFixed = false }: Props) => {
     const techStack = [
         { src: '/images/icone-html-orange.png', alt: 'HTML' },
-        // { src: '/images/javascript.png', alt: 'JavaScript' },
         { src: '/images/nextjs-original.png', alt: 'Next.js' },
         { src: '/images/nodejs.png', alt: 'Node.js' },
         { src: '/images/React-icon.svg.png', alt: 'React' }
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
+    const container = useRef(null);
 
+    // تبديل الأيقونات كل 3 ثواني
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setCurrentIndex((prev) => (prev + 1) % techStack.length);
+    //     }, 3000);
+    //     return () => clearInterval(interval);
+    // }, [techStack.length]);
+
+    // جوه LeftSection.tsx
     useEffect(() => {
+        // لو السيستم اتصلح، متعملش Interval أصلاً
+        if (isFixed) return;
+
         const interval = setInterval(() => {
-            // setIsAnimating(true);
-
             setCurrentIndex((prev) => (prev + 1) % techStack.length);
-            // setTimeout(() => {
-            //     setIsAnimating(false);
-            // }, 2200);
-
         }, 1400);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [isFixed, techStack.length]); // ضفنا isFixed هنا عشان الـ Effect يحس بالتغيير
+
+    useGSAP(() => {
+        if (isFixed) {
+            // دوران المدار (Orbit)
+            gsap.to(".tech-orbit", {
+                rotate: 360,
+                duration: 8,
+                repeat: -1,
+                ease: "none"
+            });
+            // دوران عكسي للأيقونة عشان تفضل عدلة (Counter-rotate)
+            gsap.to(".orbit-icon-inner", {
+                rotate: -360,
+                duration: 8,
+                repeat: -1,
+                ease: "none"
+            });
+        } else {
+            // حالة الـ Broken: اهتزاز عشوائي
+            gsap.to(".broken-part", {
+                x: "random(-2, 2)",
+                y: "random(-2, 2)",
+                duration: 0.1,
+                repeat: -1,
+                yoyo: true
+            });
+        }
+    }, { scope: container, dependencies: [isFixed] });
 
     return (
-        <div className='p-4 rounded-xl lg:col-span-2 md:col-span-2 bg-brand-secondary/50 flex flex-col items-start'>
-            <div className='flex items-center lg:flex-row flex-col gap-4 mb-8'>
-                <Image
-                    src="/images/youssef.png"
-                    className='rounded-full object-contain'
-                    alt="Hero"
-                    width={200}
-                    height={200}
-                />
-                <h2 className='lg:text-3xl text-xl bg-brand-secondary/50 p-3 rounded-2xl w-full font-bold'>Hello, I am Youssef Mahmoud</h2>
+        <div ref={container} className={`p-4 rounded-xl backdrop-blur-md bg-brand-secondary/50 flex flex-col items-start transition-all duration-700 h-full
+            ${!isFixed ? 'border-dashed border-2 border-brand-error/30 -rotate-20' : 'border-none'}`}>
+
+            {/* الجزء العلوي: الصورة والاسم (رجعوا مكانهم) */}
+            <div className={`flex items-center lg:flex-row flex-col gap-4 mb-8 transition-all duration-1000 w-full broken-part
+                ${!isFixed ? 'translate-x-[-10px] -skew-y-2' : 'translate-x-0 skew-y-0'}`}>
+
+                <div className={`relative transition-transform duration-700 ${!isFixed ? 'rotate-[10deg] scale-90' : 'rotate-0 scale-100'}`}>
+                    <Image
+                        src="/images/youssef.png"
+                        className={`rounded-full object-contain transition-all ${!isFixed ? 'grayscale contrast-125' : ''}`}
+                        alt="Hero"
+                        width={180}
+                        height={180}
+                    />
+                    {!isFixed && <div className="absolute inset-0 bg-brand-error/20 rounded-full animate-pulse blur-xl -z-10"></div>}
+                </div>
+
+                <h2 className={`lg:text-2xl text-xl bg-brand-secondary/50 p-4 rounded-2xl w-full font-bold transition-all duration-700
+                    ${!isFixed ? 'text-brand-error line-through opacity-60' : 'text-primary border border-brand-border/30'}`}>
+                    Hello, I am Youssef Mahmoud
+                </h2>
             </div>
 
-            {/* Animated Tech Stack */}
-            <div className="relative mt-2 flex flex-col items-center w-full">
-                {/* First Circle (Always visible) */}
-                <div className="relative z-10">
-                    <div className="w-32 h-32 rounded-full border-2 shadow-lg flex items-center justify-center font-semibold text-lg">
-                        Skills
+            {/* سيكشن المهارات الجديد (The Orbit) */}
+            <div className="relative mt-10 flex flex-col items-center justify-center w-full min-h-[280px]">
+
+                {/* النواة: Skills */}
+                <div className="relative z-20">
+                    <div className={`w-24 h-24 rounded-full border-2 flex items-center justify-center font-black transition-all duration-500 broken-part
+                        ${isFixed ? 'border-brand-primary bg-brand-bg shadow-[0_0_25px_rgba(59,130,246,0.2)]' : 'border-brand-error text-brand-error'}`}>
+                        {isFixed ? 'SKILLS' : 'ERR_404'}
                     </div>
                 </div>
 
+                {/* المدار (Orbit) */}
+                <div className={`absolute w-56 h-56 tech-orbit flex items-center justify-center transition-opacity duration-500 ${!isFixed ? 'opacity-40' : 'opacity-100'}`}>
 
-                <div className="absolute top-16 left-1/2 -translate-x-1/2 h-32">
-                    <svg
-                        className="w-8 h-32 animate-lightning"
-                        viewBox="0 0 40 120"
-                        style={{
-                            animation: 'lightning 1.5s infinite',
-                            opacity: 0,
-                            filter: 'drop-shadow(0 0 8px #60a5fa)' // Adds the electric glow
-                        }}
-                    >
-                        {/* The Jagged Thunder Path */}
-                        <path
-                            d="M 20 0 L 10 30 L 25 25 L 5 60 L 30 55 L 10 100"
-                            stroke="url(#lightning-gradient)"
-                            strokeWidth="3"
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        />
-                        <defs>
-                            <linearGradient id="lightning-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                                <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
-                                <stop offset="20%" stopColor="#bae6fd" stopOpacity="1" />
-                                <stop offset="50%" stopColor="#3b82f6" stopOpacity="1" />
-                                <stop offset="80%" stopColor="#bae6fd" stopOpacity="1" />
-                                <stop offset="100%" stopColor="#60a5fa" stopOpacity="0" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
+                    {/* الدائرة الوهمية للمدار */}
+                    <div className={`absolute inset-0 border rounded-full transition-colors ${isFixed ? 'border-brand-primary/20 border-dashed' : 'border-brand-error/20'}`}></div>
 
-
-                {/* Second Circle (Animated) */}
-                <div className="relative z-10 top-9">
-                    <div
-                        className={`w-32 h-32 rounded-full border-4 bg-white shadow-lg flex items-center justify-center transition-all duration-300`}
-                    >
-                        <div
-                            key={currentIndex}
-                            className="animate-techImage"
-                        >
+                    {/* الأيقونة اللي بتلف */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 orbit-icon-inner">
+                        <div className={`w-14 h-14 p-2 rounded-xl bg-brand-bg border transition-all duration-500 flex items-center justify-center shadow-xl
+                            ${isFixed ? 'border-brand-primary/50' : 'sepia invert scale-75 rotate-45 border-brand-error'}`}>
                             <Image
+                                key={currentIndex}
                                 src={techStack[currentIndex].src}
-                                className='object-contain'
-                                alt={techStack[currentIndex].alt}
-                                width={60}
-                                height={60}
+                                alt="tech"
+                                width={35} height={35}
+                                className="object-contain animate-in fade-in zoom-in duration-500"
                             />
                         </div>
                     </div>
                 </div>
+
+                {/* تيار البرق/الكهرباء (Optional Glow) */}
+                {isFixed && (
+                    <div className="absolute w-1 h-20 bg-gradient-to-t from-brand-primary/0 via-brand-primary/40 to-brand-primary/0 animate-pulse"></div>
+                )}
             </div>
-
-
-            <style jsx>{`
-    @keyframes lightning {
-        0% {
-            opacity: 0;
-            transform: scaleY(0) skewX(0deg);
-            transform-origin: top;
-        }
-
-        5% {
-            opacity: 1;
-            transform: scaleY(1.2) skewX(-5deg);
-        }
-        7% {
-            opacity: 0.2;
-            transform: scaleY(1) skewX(5deg);
-        }
-        9% {
-            opacity: 1;
-            transform: scaleY(1) skewX(0deg);
-        }
-
-        25% {
-            opacity: 0;
-            transform: scaleY(1);
-        }
-        100% {
-            opacity: 0;
-        }
-    }
-
-    .animate-lightning {
-        animation: lightning 2.9s ease-out infinite;
-    }
-`}</style>
-
         </div>
     )
 }
 
-export default LeftSection
+export default LeftSection;
