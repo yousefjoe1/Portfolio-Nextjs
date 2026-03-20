@@ -3,6 +3,7 @@ import HeroSection from "./components/Hero/HeroSection";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Projects from "./components/Projects/Projects";
+import SkillsSection from "./components/Skills/SkillsSection";
 
 gsap.registerPlugin(useGSAP);
 
@@ -17,6 +18,10 @@ export default function Home() {
       <header>
         <HeroSection />
       </header>
+      <section className="bg-brand-secondary/50 backdrop-blur-md rounded-2xl overflow-hidden">
+
+        <SkillsSection />
+      </section>
 
       <section className="bg-brand-secondary/50 backdrop-blur-md rounded-2xl p-4 overflow-hidden">
         <Projects />
