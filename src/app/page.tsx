@@ -18,7 +18,7 @@ export default function Home() {
         <HeroSection />
       </header>
 
-      <section className="bg-brand-secondary/50 rounded-2xl p-4">
+      <section className="bg-brand-secondary/50 backdrop-blur-md rounded-2xl p-4 overflow-hidden">
         <Projects />
       </section>
 
