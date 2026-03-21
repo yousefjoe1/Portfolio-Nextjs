@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Projects from "./components/Projects/Projects";
 import SkillsSection from "./components/Skills/SkillsSection";
+import Certifications from "./components/Certifications/Certifications";
 
 gsap.registerPlugin(useGSAP);
 
@@ -25,6 +26,10 @@ export default function Home() {
 
       <section className="bg-brand-secondary/50 backdrop-blur-md rounded-2xl p-4 overflow-hidden">
         <Projects />
+      </section>
+
+      <section className="bg-brand-secondary/50 backdrop-blur-md rounded-2xl p-4 overflow-hidden">
+        <Certifications />
       </section>
 
 
