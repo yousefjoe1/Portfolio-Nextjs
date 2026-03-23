@@ -3,17 +3,16 @@
 import Image from 'next/image';
 import { useRef, useState, useEffect, useCallback } from 'react';
 import { gsap } from 'gsap';
-import { useGSAP } from '@gsap/react';
 
 // ─── Skills Data ──────────────────────────────────────────────────────────────
 const skills = [
     { name: 'React', level: 'Expert', src: '/images/React-icon.svg.png', color: '#61dafb', x: 6, y: 8 },
-    { name: 'Next.js', level: 'Expert', src: '/images/nextjs-original.png', color: '#ffffff', x: 30, y: 30 },
-    { name: 'TypeScript', level: 'Advanced', src: '/images/typescript.png', color: '#3178c6', x: 58, y: 20 },
-    { name: 'Tailwind', level: 'Expert', src: '/images/tailwind.png', color: '#38bdf8', x: 8, y: 52 },
-    { name: 'Node.js', level: 'Advanced', src: '/images/nodejs.png', color: '#68a063', x: 36, y: 60 },
-    { name: 'HTML/CSS', level: 'Expert', src: '/images/icone-html-orange.png', color: '#e34c26', x: 48, y: 80 },
-    { name: 'MongoDB', level: 'Mid', src: '/images/mongo.png', color: '#47a248', x: 74, y: 75 },
+    { name: 'Next.js', level: 'Expert', src: '/images/nextjs-original.png', color: '#ffffff', x: 3, y: 30 },
+    { name: 'TypeScript', level: 'Advanced', src: '/images/typescript.png', color: '#3178c6', x: 48, y: 20 },
+    { name: 'Tailwind', level: 'Expert', src: '/images/tailwind.png', color: '#38bdf8', x: 1, y: 50 },
+    { name: 'Node.js', level: 'Advanced', src: '/images/nodejs.png', color: '#68a063', x: 45, y: 60 },
+    { name: 'HTML/CSS', level: 'Expert', src: '/images/icone-html-orange.png', color: '#e34c26', x: 8, y: 80 },
+    { name: 'MongoDB', level: 'Mid', src: '/images/mongo.png', color: '#47a248', x: 54, y: 75 },
     { name: 'Git', level: 'Expert', src: '/images/git.png', color: '#f05032', x: 54, y: 40 },
 ];
 
@@ -295,7 +294,7 @@ const SkillsSection = () => {
                 {!saved && (
                     <button
                         onClick={handleSave}
-                        className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 bg-brand-error text-white px-8 py-3 rounded-full font-black uppercase tracking-widest shadow-[0_0_24px_rgba(239,68,68,0.5)] hover:scale-110 active:scale-95 transition-transform animate-bounce"
+                        className="absolute text-sm bottom-1 left-1/2 -translate-x-1/2 z-20 bg-brand-error text-white p-3 rounded-full font-black uppercase tracking-widest shadow-[0_0_24px_rgba(239,68,68,0.5)] hover:scale-110 active:scale-95 transition-transform animate-bounce"
                     >
                         Save Them!
                     </button>
