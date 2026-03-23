@@ -6,13 +6,15 @@ import { X } from 'lucide-react';
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 export const certifications = [
-    { id: 1, src: '/certifications/certifi1(1).jpg', title: 'Certification 1' },
-    { id: 2, src: '/certifications/certifi1-(1).png', title: 'Certification 2' },
+    { id: 15, src: '/certifications/certificate-1.jpg', title: 'Certification 1' },
+    { id: 16, src: '/certifications/c2-udacity.jpg', title: 'Certification 2' },
     { id: 3, src: '/certifications/certifi1(2).jpg', title: 'Certification 3' },
-    { id: 4, src: '/certifications/certifi1-2(2).png', title: 'Certification 4' },
+    { id: 2, src: '/certifications/certifi1-(1).png', title: 'Certification 2' },
     { id: 5, src: '/certifications/certifi13(3).jpg', title: 'Certification 5' },
-    { id: 6, src: '/certifications/certifi14(3).png', title: 'Certification 6' },
     { id: 7, src: '/certifications/certifi14(4).jpg', title: 'Certification 7' },
+    { id: 4, src: '/certifications/certifi1-2(2).png', title: 'Certification 4' },
+    { id: 6, src: '/certifications/certifi14(3).png', title: 'Certification 6' },
+    { id: 1, src: '/certifications/certifi1(1).jpg', title: 'Certification 1' },
     { id: 8, src: '/certifications/certifi15(4).png', title: 'Certification 8' },
     { id: 9, src: '/certifications/certifi15(5).png', title: 'Certification 9' },
     { id: 10, src: '/certifications/certifi16(6).png', title: 'Certification 10' },
@@ -80,12 +82,6 @@ const Lightbox = ({ cert, onClose }: LightboxProps) => {
                     className="w-full h-auto object-contain"
                     priority
                 />
-                <div
-                    className="absolute bottom-0 left-0 right-0 px-5 py-3 text-sm font-bold text-white"
-                    style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}
-                >
-                    {cert.title}
-                </div>
             </div>
         </div>
     );
