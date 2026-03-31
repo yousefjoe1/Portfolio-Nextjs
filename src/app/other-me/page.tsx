@@ -1,5 +1,5 @@
-import React from 'react';
-import { Trophy, BookOpen, Briefcase, Terminal, Dumbbell, Zap, GraduationCap } from 'lucide-react';
+import { BookOpen, Briefcase, Terminal, Dumbbell, Zap, GraduationCap } from 'lucide-react';
+import Image from 'next/image';
 
 const MyJourney = () => {
     return (
@@ -16,21 +16,31 @@ const MyJourney = () => {
                 <div className="space-y-24">
 
                     {/* Section 1: The Athlete */}
-                    <section className="relative">
-                        <div className="flex items-center gap-4 mb-6">
-                            <Dumbbell className="text-brand w-8 h-8" />
-                            <h2 className="text-3xl font-bold italic">The Natural Athlete</h2>
+                    <section className="relative flex gap-4">
+                        <div>
+                            <div className="flex items-center gap-4 mb-6">
+                                <Dumbbell className="text-brand w-8 h-8" />
+                                <h2 className="text-3xl font-bold italic">The Natural Athlete</h2>
+                            </div>
+                            <p className="text-xl leading-11 text-gray-300 first-letter:text-5xl first-letter:font-bold first-letter:text-brand first-letter:mr-3 first-letter:float-left">
+                                Since I was young, I was an athlete. I started with **Gymnastics** and was a naturally talented boy.
+                                Then I moved to **Karate** and earned my Yellow Belt. After that, I transitioned to **Kung Fu Sanda**,
+                                competing in multiple local championships winning every single one of them, the first one I faced 2 boys 2 matches, one was fit for me and the other was taller and more experienced than me, but I won, I fighted like I do not have a choice, I derived my self like a bullet toward the taller one.
+                                <br />
+                                The last championship was the best one, it was after I trained well, I was training in 2 gyms, one for Kung Fu and one for MMA, I was training hard.
+                                Alongside Kung Fu, I was practicing **MMA (Mixed Martial Arts)**. I was remarkably talented;
+                                whenever I walked into any gym, everyone was amazed by my speed and power.
+                                I was fast, I was strong I was a beast.
+                            </p>
                         </div>
-                        <p className="text-xl leading-11 text-gray-300 first-letter:text-5xl first-letter:font-bold first-letter:text-brand first-letter:mr-3 first-letter:float-left">
-                            Since I was young, I was an athlete. I started with **Gymnastics** and was a naturally talented boy.
-                            Then I moved to **Karate** and earned my Yellow Belt. After that, I transitioned to **Kung Fu Sanda**,
-                            competing in multiple local championships winning every single one of them, the first one I faced 2 boys, one was fit for me and the ohter was taller and more experienced than me, but I won, I fighted like I do not have a choice, I derived my self like a bullet toward the taller one.
-                            <br />
-                            The last championship was the best one, it was after I trained well, I was training in 2 gyms, one for Kung Fu and one for MMA, I was training hard.
-                            Alongside Kung Fu, I was practicing **MMA (Mixed Martial Arts)**. I was remarkably talented;
-                            whenever I walked into any gym, everyone was amazed by my speed and power.
-                            I was fast, I was strong I was a beast.
-                        </p>
+
+                        <Image
+                            src="/me/tikondo-image.jpeg"
+                            alt="Youssef Mahmoud"
+                            width={500}
+                            height={500}
+                            className="rounded-xl object-contain"
+                        />
                     </section>
 
                     {/* Section 2: Discipline & Mindset */}
@@ -116,6 +126,18 @@ const MyJourney = () => {
                         <p className="mt-6 text-xl text-gray-300">
                             After 3 months, I knew it was time for more. white I was working in the medical store and also with the Indian guy I kept building, kept applying, when I back to home I learn and work, and forged a new mindset:
                             **&quot;Go to the interview to hear &apos;No&apos;, not &apos;Yes&apos;. It&apos;s okay. Just go, try, and never mind the outcome.&quot;**
+                        </p>
+
+                        <p className="mt-6 text-xl text-gray-300">
+                            I got my first interview on a freelance platfrom, but I was not fit for the job yet, the second one what on site,I got a call from one of the the company, he said: you have applied in Front end posistion at our company, I said when ? what company ? he said the information about him and his company and i Just said yes of course, I realy forgot that I applied to this company hahaha, then when it comes the interview day, I closed the Medical store, I went to the interview, I with a mindset of: just go to see what is that company, what is it look like, just do not panic, just be calm
+                        </p>
+
+                        <p className="mt-6 text-xl text-gray-300">
+                            Before I go I studed a little to refresh my mind, and I went to the interview, and I can not believe that It was so so easy, a back end developer did the interview with me, he was know a little about what he asking, but he just wanted to know that I understand the code, concepts, logic, then he told me: we will call you .
+                        </p>
+
+                        <p className="mt-6 text-xl text-gray-300">
+                            after about 1 week, I got my call to go to a 3 months training with a basic salary as starting, to insure that I am ready for the job and the annual contract, I was so happy, I left the medical store, and I started my journey as a front end developer with React.js .
                         </p>
                     </section>
 
