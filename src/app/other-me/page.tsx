@@ -1,4 +1,4 @@
-import { BookOpen, Briefcase, Terminal, Dumbbell, Zap, GraduationCap } from 'lucide-react';
+import { BookOpen, Briefcase, Terminal, Dumbbell, Zap, GraduationCap, MoveUpRight } from 'lucide-react';
 import Image from 'next/image';
 
 const MyJourney = () => {
@@ -43,6 +43,65 @@ const MyJourney = () => {
                         />
                     </section>
 
+
+                    <section>
+                        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl">
+                            <iframe
+                                className="absolute top-0 left-0 w-full h-full"
+                                src="https://www.youtube.com/embed/zgp6ttgDHdE?autoplay=1&mute=1&loop=1&playlist=zgp6ttgDHdE"
+                                title="Parkour Video"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                    </section>
+
+                    <section className="relative grid grid-cols-2 gap-4">
+                        <div>
+                            <div className="flex items-center gap-4 mb-6">
+                                <div className="relative">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand">
+                                        <path d="M17 10l-3-3m0 0l-3 3m3-3v12" />
+                                        <circle cx="12" cy="5" r="1" />
+                                        <path d="M7 20h10" />
+                                    </svg>
+                                </div>
+                                <h2 className="text-3xl font-bold italic">Parkour Man</h2>
+                            </div>
+                            <p className="text-xl leading-11 text-gray-300 first-letter:text-5xl first-letter:font-bold first-letter:text-brand first-letter:mr-3 first-letter:float-left">
+                                I was intersted in Parkour, I loved it and started watching videos to learn, I was practicing it alone and with friends, I was jumping from walls and I let my self go further and further.
+                            </p>
+                        </div>
+                        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl">
+                            <iframe
+                                className="absolute top-0 left-0 w-full h-full"
+                                src="https://www.youtube.com/embed/Nyj8WpyNZxI?autoplay=1&mute=1&loop=1&playlist=Nyj8WpyNZxI"
+                                title="Parkour Video"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                    </section>
+                    <section>
+                        <h1 className="text-2xl font-bold">I love Quran</h1>
+                        <p className="text-xl leading-11 text-gray-300 first-letter:text-5xl first-letter:font-bold first-letter:text-brand first-letter:mr-3 first-letter:float-left">
+                            I love Quran and I try to read it every day, I love to listen to Quran so much, I learned how to read and prounce Quran
+                        </p>
+                        <p className="text-xl leading-11 text-gray-300 first-letter:text-5xl first-letter:font-bold first-letter:text-brand first-letter:mr-3 first-letter:float-left">
+                            I started to be Emam in the mosque when I was 25 years old, I was praying in a mosque that the Emam not show regular to pray, so I said to one of the mosque workers that I can pray for people, and they liked it, so I started to be Emam in the mosque.
+                        </p>
+                        <p className="text-xl leading-11 text-gray-300 first-letter:text-5xl first-letter:font-bold first-letter:text-brand first-letter:mr-3 first-letter:float-left">
+                            Then Every Ramadan I was praying Tarawih for people.
+                        </p>
+                        <div>
+                            {/* sound of quran */}
+                            <audio controls>
+                                <source src="/record/youssef.mp3" type="audio/mpeg" />
+                            </audio>
+                        </div>
+                    </section>
                     {/* Section 2: Discipline & Mindset */}
                     <section className="grid md:grid-cols-2 gap-12 items-center bg-zinc-900/50 p-8 rounded-3xl border border-white/5">
                         <div>
