@@ -16,7 +16,7 @@ const MyJourney = () => {
                 <div className="space-y-24">
 
                     {/* Section 1: The Athlete */}
-                    <section className="relative flex gap-4">
+                    <section className="relative lg:flex gap-4">
                         <div>
                             <div className="flex items-center gap-4 mb-6">
                                 <Dumbbell className="text-brand w-8 h-8" />
@@ -57,7 +57,7 @@ const MyJourney = () => {
                         </div>
                     </section>
 
-                    <section className="relative grid grid-cols-2 gap-4">
+                    <section className="relative grid lg:grid-cols-2 gap-4">
                         <div>
                             <div className="flex items-center gap-4 mb-6">
                                 <div className="relative">
