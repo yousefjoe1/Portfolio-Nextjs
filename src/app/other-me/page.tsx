@@ -4,7 +4,7 @@ import Image from 'next/image';
 const MyJourney = () => {
     return (
         <div className="min-h-screen bg-[#0a0a0a] text-gray-200 py-20 px-6 md:px-12 font-sans">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-[90%] w-full mx-auto">
                 {/* Header Section */}
                 <div className="mb-20 text-center">
                     <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-l from-brand to-white bg-clip-text text-transparent">
