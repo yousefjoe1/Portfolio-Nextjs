@@ -15,7 +15,7 @@ export default function Home() {
 
   // bg-[#0a051a] bg-[radial-gradient(circle_at_top_right,var(--tw-gradient-stops))] from-[#2d1b4d] via-[#0a051a] to-[#0a051a]
   return (
-    <main className="lg:p-9 md:p-5 p-2 flex flex-col gap-20 ">
+    <main className="lg:p-9 md:p-5 p-2 flex flex-col gap-20 overflow-hidden ">
       <h2 className="text-4xl text-center bg-brand-bg p-2 md:text-5xl font-bold text-white mb-2">
         This is not my Portfolio,
         <span className="bg-gradient-to-r text-center from-indigo-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
