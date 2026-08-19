@@ -18,7 +18,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
     return (
         <>
-            <div className='card-div bg-brand-tertiary group relative rounded-lg shadow-md overflow-hidden min-h-[480px] cursor-pointer transition-all duration-300 hover:shadow-xl'>
+            <div className='card-div bg-brand-tertiary group relative rounded-lg shadow-md overflow-hidden min-h-[480px] transition-all duration-300 hover:shadow-xl'>
 
                 <div className='bg-black/10 absolute opacity-0 group-hover:opacity-100 inset-0 z-10 group-hover:z-0 w-3 h-3 rounded-full group-hover:w-full group-hover:rounded-none group-hover:h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300' />
 

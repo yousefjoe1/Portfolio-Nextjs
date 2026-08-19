@@ -1,11 +1,9 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-
 /**
  * BrokenGlass
  * -----------
- * Overlay this on any card. Pass `isFixed` to trigger the reassembly animation.
+ * Overlay this on any card. Hidden when `isFixed` is true.
  *
  * Usage:
  *   <div className="relative ...">
@@ -66,59 +64,11 @@ interface BrokenGlassProps {
 }
 
 export const BrokenGlass = ({ isFixed }: BrokenGlassProps) => {
-    const shardRefs = useRef<(SVGGElement | null)[]>([])
-    const overlayRef = useRef<SVGSVGElement>(null)
-    const rafRef = useRef<number | null>(null)
-
-    // ── Broken state: shake loop ──────────────────────────────────────────────
-    useEffect(() => {
-        if (isFixed) return
-
-        let t = 0
-        const shake = () => {
-            t += 0.18
-            shardRefs.current.forEach((el, i) => {
-                if (!el) return
-                const s = SHARDS[i]
-                el.style.transform = `translate(${s.dx}px, ${s.dy}px) rotate(${s.rotate}deg)`
-            })
-            rafRef.current = requestAnimationFrame(shake)
-        }
-
-        rafRef.current = requestAnimationFrame(shake)
-        return () => {
-            if (rafRef.current) cancelAnimationFrame(rafRef.current)
-        }
-    }, [isFixed])
-
-    // ── Fixed state: spring back & fade ──────────────────────────────────────
-    useEffect(() => {
-        if (!isFixed) return
-
-        // Stop shake loop
-        if (rafRef.current) cancelAnimationFrame(rafRef.current)
-
-        // Snap shards to origin with staggered spring
-        shardRefs.current.forEach((el, i) => {
-            if (!el) return
-            setTimeout(() => {
-                el.style.transition = 'transform 0.9s cubic-bezier(.34,1.56,.64,1), opacity .8s'
-                el.style.transform = 'translate(0,0) rotate(0deg)'
-            }, i * 40)
-        })
-
-        // Fade out whole overlay after shards settle
-        const timer = setTimeout(() => {
-            if (overlayRef.current) overlayRef.current.style.opacity = '0'
-        }, 600)
-
-        return () => clearTimeout(timer)
-    }, [isFixed])
+    if (isFixed) return null
 
     return (
         <svg
-            ref={overlayRef}
-            className="pointer-events-none absolute inset-0 w-full h-full transition-opacity duration-1000"
+            className="pointer-events-none absolute inset-0 w-full h-full"
             // preserveAspectRatio="none" so it stretches to any card size
             viewBox="0 0 340 130"
             preserveAspectRatio="none"
@@ -134,14 +84,12 @@ export const BrokenGlass = ({ isFixed }: BrokenGlassProps) => {
             </defs>
 
             {/* Shard glass faces */}
-            {SHARDS.map((shard, i) => (
+            {SHARDS.map((shard) => (
                 <g
                     key={shard.id}
-                    ref={(el) => { shardRefs.current[i] = el }}
                     clipPath={`url(#bg-${shard.id})`}
                     style={{
                         transform: `translate(${shard.dx}px, ${shard.dy}px) rotate(${shard.rotate}deg)`,
-                        willChange: 'transform',
                     }}
                 >
                     {/* Base glass tint */}
