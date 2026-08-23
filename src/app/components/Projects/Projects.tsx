@@ -5,6 +5,8 @@ import ProjectCard from './ProjectCard';
 const links = ['https://digitalgym.in/v1/app/pages/dashboards/default.html'];
 
 const myProjects = [
+    { cat: 'Real world', name: 'Ibtikar Store', image: '/images/ibtikar.png', details: 'WooCommerce store for Ibtikar, a Saudi computer hardware retailer. Product catalogs, cart and checkout, installment payments, and category browsing in Arabic.', tech: ['WordPress', 'WooCommerce', 'PHP'], link: 'https://ibtikarstore.sa/' },
+    { cat: 'Real world', name: 'MAS Al-Sharq', image: '/images/mass.png', details: 'WordPress website for MAS Al-Sharq Industries, a Saudi B2B manufacturer of plastic products and industrial detergents. Product catalogs, quote requests, company profile, and contact flows in Arabic.', tech: ['WordPress', 'PHP', 'Elementor'], link: 'https://lavender-chicken-689152.hostingersite.com/' },
     { cat: 'Real world', name: 'SustainGRC', image: '/images/sustainegrc.png', details: 'SustainGRC is a London-based AI platform transforming corporate carbon emissions, ESG risk management and assurance.', tech: ['React.js', 'Next.js', 'Tailwind CSS', 'Shadcn-ui'], link: 'https://www.sustaingrc.com/' },
     { cat: 'Real world', name: 'Eskan El Mansoura', image: '/images/eskan.png', details: 'A real estate website with various properties, filters by price/unit/block, and an admin dashboard.', tech: ['SASS', 'React.js', 'Redux.js', 'Tailwind CSS', 'Chakra-UI'], link: 'https://mansoura-eco-build.com/' },
     { cat: 'Real world', name: 'Abo Taleb', image: '/images/abo-taleb.png', details: 'Online English courses platform for Military Bases Students with payment integration and admin dashboard.', tech: ['React.js', 'Redux.js', 'Tailwind CSS'], link: 'https://www.sirtz.com/' },
