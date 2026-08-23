@@ -18,7 +18,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
     return (
         <>
-            <div className='card-div bg-brand-tertiary group relative rounded-lg shadow-md overflow-hidden min-h-[480px] transition-all duration-300 hover:shadow-xl'>
+            <div className='card-div bg-brand-bg text-brand-text group relative rounded-lg shadow-md overflow-hidden min-h-[480px] border border-brand-border transition-all duration-300 hover:shadow-xl'>
 
                 <div className='bg-black/10 absolute opacity-0 group-hover:opacity-100 inset-0 z-10 group-hover:z-0 w-3 h-3 rounded-full group-hover:w-full group-hover:rounded-none group-hover:h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300' />
 
@@ -34,13 +34,13 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
                 <div className='p-4 flex flex-col gap-3 relative'>
 
-                    <div className="flex justify-between">
-                        <h3 className='text-xl font-semibold mb-2'>{project.name}</h3>
+                    <div className="flex justify-between items-start gap-2">
+                        <h3 className='text-xl font-semibold mb-2 text-brand-text'>{project.name}</h3>
                         <button
                             onClick={() => detailsModal.current?.showModal()}
-                            className='w-fit bg-brand-primary/20 text-white px-4 py-2 rounded-full hover:bg-brand-secondary transition-all duration-300 hover:scale-105'
+                            className='w-fit bg-brand-primary text-white px-3 py-2 rounded-full hover:opacity-90 transition-all duration-300 hover:scale-105'
+                            aria-label={`Details about ${project.name}`}
                         >
-
                             <FileQuestionMark size={20} />
                         </button>
                     </div>
@@ -50,7 +50,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                         {project.tech.map((tech, index) => (
                             <span
                                 key={index}
-                                className='bg-brand-secondary text-white px-3 py-1 rounded-full text-sm transition-all duration-300 hover:scale-105 hover:bg-brand-primary'
+                                className='bg-brand-primary/15 text-brand-text border border-brand-primary/30 px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 hover:bg-brand-primary hover:text-white hover:border-brand-primary'
                             >
                                 {tech}
                             </span>
@@ -62,7 +62,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
                             href={project.link}
                             target='_blank'
                             rel='noopener noreferrer'
-                            className='bg-brand-primary/20 text-white px-4 py-2 rounded-full hover:bg-brand-secondary transition-all duration-300 hover:scale-105 flex items-center group/link'
+                            className='bg-brand-primary text-white px-3 py-2 rounded-full hover:opacity-90 transition-all duration-300 hover:scale-105 flex items-center'
+                            aria-label={`Visit ${project.name}`}
                         >
                             <Sunrise size={20} />
                         </a>
@@ -75,7 +76,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
                                             href={l}
                                             target='_blank'
                                             rel='noopener noreferrer'
-                                            className='bg-brand-primary/20 text-white px-4 py-2 rounded-full hover:bg-brand-secondary transition-all duration-300 hover:scale-105 flex items-center group/link'
+                                            className='bg-brand-primary text-white px-3 py-2 rounded-full hover:opacity-90 transition-all duration-300 hover:scale-105 flex items-center'
+                                            aria-label={`Visit ${project.name} link ${index + 1}`}
                                         >
                                             <Sunrise size={20} />
                                         </a>
@@ -88,7 +90,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
                                 href={project.repo}
                                 target='_blank'
                                 rel='noopener noreferrer'
-                                className='ml-3 bg-brand-primary/20 text-white px-4 py-2 rounded-full hover:bg-brand-secondary transition-all duration-300 hover:scale-105'
+                                className='ml-3 bg-brand-primary text-white px-3 py-2 rounded-full hover:opacity-90 transition-all duration-300 hover:scale-105'
+                                aria-label={`${project.name} GitHub repository`}
                             >
                                 <Github size={20} />
                             </a>
@@ -98,12 +101,12 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 </div>
             </div>
 
-            <dialog ref={detailsModal} className='fixed lg:text-2xl md:text-xl sm:text-base top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand-border-secondary text-gray-300 p-4 rounded-lg transition-all duration-800 ease-in-out z-10'>
-                <div className='bg-brand-border-secondary text-gray-300 p-4 rounded-lg transform transition-all duration-800 ease-in-out z-10'>
+            <dialog ref={detailsModal} className='fixed lg:text-2xl md:text-xl sm:text-base top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand-bg text-brand-text border border-brand-border p-4 rounded-lg transition-all duration-800 ease-in-out z-10 shadow-xl'>
+                <div className='bg-brand-bg text-brand-text p-4 rounded-lg transform transition-all duration-800 ease-in-out z-10'>
                     {project.details}
                 </div>
 
-                <button onClick={() => detailsModal.current?.close()} className=' bg-brand-primary/20 text-white px-4 py-2 rounded-full hover:bg-brand-secondary transition-all duration-300 hover:scale-105'>
+                <button onClick={() => detailsModal.current?.close()} className='bg-brand-primary text-white px-4 py-2 rounded-full hover:opacity-90 transition-all duration-300 hover:scale-105'>
                     Close
                 </button>
             </dialog>

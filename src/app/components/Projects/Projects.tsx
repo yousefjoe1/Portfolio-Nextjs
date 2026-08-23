@@ -9,8 +9,8 @@ const myProjects = [
     { cat: 'Real world', name: 'Eskan El Mansoura', image: '/images/eskan.png', details: 'A real estate website with various properties, filters by price/unit/block, and an admin dashboard.', tech: ['SASS', 'React.js', 'Redux.js', 'Tailwind CSS', 'Chakra-UI'], link: 'https://mansoura-eco-build.com/' },
     { cat: 'Real world', name: 'Abo Taleb', image: '/images/abo-taleb.png', details: 'Online English courses platform for Military Bases Students with payment integration and admin dashboard.', tech: ['React.js', 'Redux.js', 'Tailwind CSS'], link: 'https://www.sirtz.com/' },
     { cat: 'Real world', name: 'Mansoura Outlet', image: '/images/outlet.png', details: 'E-commerce directory of clothing stores structured by city streets.', tech: ['React.js', 'Redux.js', 'Tailwind CSS'], link: 'https://abc-mansoura.com/' },
-    { cat: 'Real world', name: 'DGym', image: '/images/first-work-freelance.png', details: 'Gym management platform — memberships, payments, member feedback, reports, accessible from any device.', tech: ['React.js', 'Redux.js', 'Tailwind CSS'], links },
-    { cat: 'Scholarship', name: 'Shop', image: '/images/depi-project.png', details: 'E-commerce for clothes with Node.js backend.', tech: ['React.js', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB'], link: 'https://vite-React.js-chi-jet.vercel.app/' },
+    // { cat: 'Real world', name: 'DGym', image: '/images/first-work-freelance.png', details: 'Gym management platform — memberships, payments, member feedback, reports, accessible from any device.', tech: ['React.js', 'Redux.js', 'Tailwind CSS'], links },
+    { cat: 'Scholarship', name: 'Shop', image: '/images/depi-project.png', details: 'E-commerce for clothes with Node.js backend.', tech: ['React.js', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB'], link: 'https://vite-react-chi-jet.vercel.app/' },
     { cat: 'Personal', name: 'Productivity', image: '/images/productivity-app.png', details: 'Weekly Tasks feature — mark tasks to the current or desired day, resets every week.', tech: ['Next.js', 'Tailwind CSS', 'SupaBase'], link: 'https://my-tasks-inky.vercel.app/' },
     { cat: 'Personal', name: 'Questions Game', image: '/images/questions.png', details: 'Interactive quiz application with real-time features.', tech: ['HTML', 'CSS', 'JAVASCRIPT', 'React.js', 'MATERIAL-UI', 'FIREBASE', 'REDUX'], link: 'https://questions-game-cd095.web.app/' },
     { cat: 'Personal', name: 'Crypto App', image: '/images/crypto_project.png', details: 'Cryptocurrency tracker and data visualization app.', tech: ['HTML', 'CSS', 'JAVASCRIPT', 'React.js', 'Ant Design'], link: 'https://yousefjoe1.github.io/crypto-project/' },
@@ -25,8 +25,8 @@ const myProjects = [
 ];
 
 const SectionHeader = ({ label }: { label: string }) => (
-    <div className="bg-brand-secondary rounded-2xl p-2 mx-auto w-1/2 mt-12 mb-6">
-        <h3 className="bg-gradient-to-r from-indigo-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent text-3xl text-center font-semibold">
+    <div className="bg-brand-bg border border-brand-border rounded-2xl px-6 py-3 mx-auto w-fit max-w-[90%] mt-12 mb-6 shadow-sm">
+        <h3 className="text-brand-text text-2xl md:text-3xl text-center font-semibold">
             {label}
         </h3>
     </div>
