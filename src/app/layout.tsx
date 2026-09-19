@@ -32,7 +32,7 @@ export default function RootLayout({
       >
         <AOSInitializer />
         <ThemeProvider>
-          <NavBar />
+          {/* <NavBar /> */}
           {children}
         </ThemeProvider>
       </body>

@@ -3,7 +3,7 @@ import Image from 'next/image'
 const LeftSection = () => {
     return (
         <div className="h-full">
-            <div className="p-4 rounded-xl backdrop-blur-md bg-brand-secondary/50 flex flex-col items-start h-full">
+            <div className="p-4 rounded-xl bg-[#111827] flex flex-col items-start h-full">
                 <div className="flex items-center lg:flex-row flex-col gap-4 mb-8 w-full">
                     <div className="relative">
                         <Image
@@ -21,8 +21,7 @@ const LeftSection = () => {
                 </div>
 
                 <p className="text-lg leading-relaxed font-medium text-white/70">
-                    I have multiple Full Stack projects in my GitHub as personal practical projects
-                    that describe my skills in Full Stack with Next.js · React.js · Node.js · Prisma · Supabase · MongoDB.
+                Results-driven Front-End Developer with 4+ years of hands-on experience building scalable, performance-focused, and responsive web applications using React, Next.js, and TypeScript.
                 </p>
 
                 <p className="text-lg leading-relaxed font-medium text-white/70 mt-4">
